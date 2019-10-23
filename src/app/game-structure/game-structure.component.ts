@@ -14,8 +14,6 @@ export class GameStructureComponent implements OnInit {
 
   contadorDeJogadas: number;
   jogando: boolean = true;
-  corDaRodada: string = "";
-  valorMarcado: string = "";
   playerDaRodada: string = "Player 1";
   resultadoDoJogo: string;
   playerUm: boolean = true;
@@ -45,9 +43,17 @@ export class GameStructureComponent implements OnInit {
     }
   }
 
-  //Desenvolver essa funcinalidade
+  //Limpar o innerText e remover as cores das areas selecionadas na rodada anterior
   iniciarNovoJogo() {
-    alert("Iniciando novo jogo!");
+    this.jogando = true;
+    this.playerDaRodada = "Player 1";
+    this.resultadoDoJogo = "";
+    this.playerUm = true;
+
+    for (let i = 0; i <= (this.posicaoDivs.length - 1); i++) {
+      this.posicaoDivs[i] = "";
+    }
+    // console.log(this.posicaoDivs);
   }
 
   registraJogada(valor: any) {
