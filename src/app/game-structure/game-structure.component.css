@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container {
+    width: 319px;
+    height: 156px;
+}
+#novoJogo {
+    margin: 0 2px 5px;
+    width: 308px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.areaClick {
+    width: 100px;
+    height: 100px;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 36px;
+    text-align: center;
+    background-color: lightgray;
+    cursor: pointer;
+    float: left;
+    padding-top: 30px;
+}
+.areaClick:hover {
+    background-color: rgb(182, 182, 182);
+}

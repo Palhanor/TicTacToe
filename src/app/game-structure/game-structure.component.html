@@ -1,0 +1,35 @@
+<!-- 1 - Quando clica onde já foi clicado ele muda o valor -->
+<!-- 2 - O botão "Novo Jogo!" não faz nada -->
+<!-- 3 - Não dá para adicionar o hover nas áreas já clicadas -->
+<!-- 4 - Não diz de quem é a rodada ou quem ganhou o resultado da partida -->
+<!-- 5 - Não tem um placar com os resultados gerais -->
+<!-- 6 - Não reconhece a vitória na ultima jogada e considera empate -->
+
+<div>
+    <h2 *ngIf="jogando">Jogador: {{ playerDaRodada }}</h2>
+    <h2 *ngIf="!jogando">Resultado: {{ resultadoDoJogo }}</h2>
+</div>
+<div id="container">
+    <div (click)="marcaJogada($event)"  class="areaClick um"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick dois"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick tres"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick quatro"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick cinco"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick seis"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick sete"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick oito"></div>
+    <div (click)="marcaJogada($event)"  class="areaClick nove"></div>
+</div>
+<!-- Pq deu esse problema de uma div ficar do lado da outra? -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <button *ngIf="!jogando" id="novoJogo" (click)="iniciarNovoJogo()">Novo Jogo!</button>
+</div>
